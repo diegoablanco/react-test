@@ -1,0 +1,39 @@
+@import "../../stylesheets/variables";
+
+.global-notification {
+    position: relative;
+    background: $white;
+    & + & {
+        margin-top: $base-space-unit;
+    }
+}
+
+.global-notification-message {
+    // TODO: remove these styles when React Spark is included into GX
+    .text {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    .title {
+        font-family: $heading-font-family;
+        font-size: 1.6rem;
+        font-weight: 400;
+    }
+}
+
+.global-notification-btn-clear {
+    position: absolute;
+    top: .5rem;
+    right: .5rem;
+
+    width: 1.6rem;
+    height: 1.6rem;
+    padding: 0;
+
+    font-size: $font-regular;
+    text-align: center;
+    line-height: 1.2rem;
+
+    background: none;
+}

@@ -1,0 +1,74 @@
+@import "modal-variables";
+@import "../../../stylesheets/variables";
+
+.ReactModal__Body--open {
+    overflow: hidden;
+}
+
+.component-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $modal-overlay-color;
+    z-index: 10000;
+    overflow: auto;
+    animation-name: fadeIn;
+    animation-duration: .6s;
+    animation-fill-mode: both;
+
+    .modal-inner {
+        position: absolute;
+        top: 6rem;
+        left: 50%;
+        right: 40px;
+        bottom: auto;
+        border: $modal-border;
+        background: $modal-background;
+        border-radius: $modal-border-radius;
+        outline: none;
+        padding: 2rem;
+        margin-left: -$modal-width / 2;
+        width: $modal-width;
+        margin-bottom: 1rem;
+        animation-name: slideInFromTop;
+        animation-duration: .6s;
+        animation-fill-mode: both;
+        @media (max-width: $xs-device) {
+            left: 1rem;
+            right: 1rem;
+            width: auto;
+            margin-left: 0;
+        }
+        &.no-bg {
+            background: transparent;
+            color: $white;
+            text-shadow: 0 1px 1px $black;
+            h1, h2, h3, h4, h5 {
+                color: $white;
+            }
+        }
+    }
+
+    .small-modal {
+        margin-left: -$modal-small-width / 2;
+        width: $modal-small-width;
+        @media (max-width: $xs-device) {
+            width: auto;
+            margin-left: 0;
+        }
+    }
+
+    .medium-modal {
+        margin-left: -$modal-medium-width / 2;
+        width: $modal-medium-width;
+    }
+
+    .close-modal {
+        position: absolute;
+        top: -2rem;
+        color: $modal-close-button-color;
+        right: 0;
+    }
+}

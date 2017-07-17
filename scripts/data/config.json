@@ -1,0 +1,276 @@
+{
+    "name": "App",
+    "google": {
+        "recaptchaSiteKey": "6LfYfx0UAAAAAPHVqYNYC13mOnV5nYy1wSXsd_YW",
+        "analyticsUA": "UA-97551931-1",
+        "gmail": "gx.team.sabre@gmail.com"
+    },
+    "session": {
+        "enableTimeout": true,
+        "timeoutDuration": 1200000
+    },
+    "forgotPassword": {
+        "showRecaptcha": true,
+        "minPasswordLength": 7,
+        "maxPasswordLength": 30
+    },
+    "login": {
+        "expiredPassword": {
+            "daysRemainsToDisplayWaring": 6
+        },
+        "securityQuestionsSetup": {
+            "maxLength": 256,
+            "minLength": 3
+        }
+    },
+    "guestDetails": {
+        "params": {
+            "isIncludedFieldsActive": false,
+            "includedFields": "profile.Identity,profile.AddressList[Name|Type|Default|AddressLine|City|CountryName|StateProv|PostalCode],profile.EmailAddressList,profile.ContactNumberList,profile.PersonName.Prefix,profile.PersonName.ANSI_GivenName,profile.PersonName.GivenName,profile.PersonName.MiddleName,profile.PersonName.ANSI_Surname,profile.PersonName.Surname,profile.PersonName.Suffix,profile.VIP_Level,profile.DateOfBirth,profile.DateOfBirth,profile.BlackListed,profile.PreferencesList.CommentList,profile.PreferencesList.BrandPreferencesList,profile.PreferencesList.ChainPreferenceList,profile.PreferencesList.HotelPreferencesList,profile.CitizenshipList,profile.PreferencesList,profile.TravelDocumentList,profile.Gender"
+        },
+        "view": {
+            "defaultProfileImage": "default-profile-image.png",
+            "addressCount": 5,
+            "emailsCount": 5,
+            "phoneCount": 5,
+            "dobFormat": "MMMM D, YYYY",
+            "citizenshipSeparator": ", ",
+            "actionDateFormat": "ddd, MMM DD, YYYY",
+            "reservationCount": 5,
+            "preferencesShownMax": 15,
+            "genderOptions": [
+                {
+                    "value": "Female"
+                },
+                {
+                    "value": "Male"
+                }
+            ]
+        }
+    },
+    "guestList": {
+        "params": {
+            "body": {
+                "includedFields": "paging,chain.ID,profiles[Identity.ID|PersonName.GivenName|PersonName.Surname|Address.CountryName.Value|Address.StateProv.Code|Address.City|ContactNumber.Value|CustLoyalty.Points|CustLoyalty.Level|EmailAddress.Value|VIP_Level.Code]"
+            }
+        },
+        "filters": {
+            "view-options": [
+                {
+                    "value": "all",
+                    "isDefault": true
+                },
+                {
+                    "value": "gold"
+                },
+                {
+                    "value": "silver"
+                },
+                {
+                    "value": "bronze"
+                }
+            ],
+            "sort-options": [
+                {
+                    "value": "all",
+                    "isDefault": true
+                },
+                {
+                    "value": "name"
+                },
+                {
+                    "value": "address"
+                },
+                {
+                    "value": "score"
+                }
+            ]
+        },
+        "columns": [
+            {
+                "key": "index",
+                "visible": false
+            },
+            {
+                "key": "Identity.ID",
+                "visible": false
+            },
+            {
+                "key": "firstLastName",
+                "visible": true,
+                "element": "h5",
+                "group": [
+                    {
+                        "key": "PersonName.GivenName",
+                        "visible": true,
+                        "suffix": " "
+                    },
+                    {
+                        "key": "PersonName.Surname",
+                        "visible": true
+                    }
+                ]
+            },
+            {
+                "key": "addressCustom",
+                "visible": true,
+                "group": [
+                    {
+                        "key": "Address.CountryName.Value",
+                        "visible": true,
+                        "suffix": ", "
+                    },
+                    {
+                        "key": "Address.StateProv.Code",
+                        "visible": true,
+                        "suffix": ", "
+                    },
+                    {
+                        "key": "Address.City",
+                        "visible": true,
+                        "newline": true
+                    },
+                    {
+                        "key": "ContactNumber.Value",
+                        "visible": true
+                    }
+                ]
+            },
+            {
+                "key": "EmailAddress.Value",
+                "visible": true
+            },
+            {
+                "key": "valueScoreCustom",
+                "visible": false,
+                "group": [
+                    {
+                        "key": "CustLoyalty.Points",
+                        "visible": true,
+                        "suffix": " ",
+                        "translation": "component.guest-profiles.table.value-score"
+                    }
+                ]
+            },
+            {
+                "key": "loyaltyLevels",
+                "visible": true,
+                "group": [
+                    {
+                        "key": "VIP_Level.Code",
+                        "visible": true,
+                        "suffix": " "
+                    },
+                    {
+                        "key": "CustLoyalty.Level.Name",
+                        "visible": true,
+                        "suffix": " "
+                    }
+                ]
+            },
+            {
+                "key": "valueScore",
+                "visible": false
+            },
+            {
+                "key": "primaryPhone",
+                "visible": false
+            },
+            {
+                "key": "mergedBy",
+                "visible": false
+            },
+            {
+                "key": "created",
+                "visible": false
+            },
+            {
+                "key": "travelDocument",
+                "visible": false
+            },
+            {
+                "key": "memberTier",
+                "visible": false
+            },
+            {
+                "key": "address.line1",
+                "visible": false
+            },
+            {
+                "key": "address.line2",
+                "visible": false
+            }
+        ],
+        "defaultPageSize": 25,
+        "pageSizes": [
+            {
+                "value": 10,
+                "label": 10
+            },
+            {
+                "value": 25,
+                "label": 25
+            },
+            {
+                "value": 50,
+                "label": 50
+            }
+        ]
+    },
+    "mergeHistory": {
+        "defaultPageSize": 20,
+        "pageSizes": [
+            {
+                "value": 10,
+                "label": 10
+            },
+            {
+                "value": 20,
+                "label": 20
+            },
+            {
+                "value": 30,
+                "label": 30
+            },
+            {
+                "value": 40,
+                "label": 40
+            },
+            {
+                "value": 50,
+                "label": 50
+            }
+        ],
+        "columns": [
+            {
+                "key": "id",
+                "visible": true
+            },
+            {
+                "key": "name.last",
+                "visible": true
+            },
+            {
+                "key": "name.first",
+                "visible": true
+            },
+            {
+                "key": "match",
+                "visible": true,
+                "suffix": "%"
+            },
+            {
+                "key": "mergeDate",
+                "visible": true
+            },
+            {
+                "key": "admin",
+                "visible": true
+            },
+            {
+                "key": "view",
+                "visible": true
+            }
+        ]
+    }
+}

@@ -1,0 +1,10 @@
+@import "../../../stylesheets/colors";
+
+$modal-overlay-color: rgba($black, .7) !default;
+$modal-border: none !default;
+$modal-background: $white !default;
+$modal-border-radius: .25rem !default;
+$modal-close-button-color: $white !default;
+$modal-width: 900px !default;
+$modal-small-width: 600px !default;
+$modal-medium-width: 720px !default;
